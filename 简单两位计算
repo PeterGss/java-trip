@@ -1,0 +1,27 @@
+import java.io.InputStream;
+import java.util.Scanner;
+
+public class work4 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+				System.out.println("请输入算式（逐个输入）");
+				Scanner a=new Scanner(System.in);
+				double x=a.nextDouble();
+				String o=a.next();
+				double y=a.nextDouble();
+				if ("+".equals(o)) { 
+					   System.out.println("result="+(x+y)); 
+					  }else if ("-".equals(o)) { 
+					   System.out.println("result="+(x-y)); 
+					  }else if ("*".equals(o)) { 
+					   System.out.println("result="+(x*y)); 
+					  }else if ("/".equals(o)) { 
+					   System.out.println("result="+(x/y)); 
+					  }else { 
+					   System.out.println("出现异常"); 
+					  } 
+	}
