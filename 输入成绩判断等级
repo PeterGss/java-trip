@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+
+public class work2_1 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			System.out.println("请输入您的分数：");
+				int score;
+				Scanner sc=new Scanner(System.in);
+				
+				do{
+					score=sc.nextInt();
+				switch(score/10){
+				case 10 : System.out.println("您的分数等级是A");break;
+				case 9 : System.out.println("您的分数等级是A");break;
+				case 8 : System.out.println("您的分数等级是B");break;
+				case 7 : System.out.println("您的分数等级是C");break;
+				case 6 : System.out.println("您的分数等级是D");break;
+				case 5 : System.out.println("您的分数等级是E");break;
+				case 4 : System.out.println("您的分数等级是E");break;
+				case 3 : System.out.println("您的分数等级是E");break;
+				case 2 : System.out.println("您的分数等级是E");break;
+				case 1 : System.out.println("您的分数等级是E");break;
+				case 0 : System.out.println("您的分数等级是E");break;
+				
+				}
+				}
+				while(score>=0&&score<=100);
+				System.out.println("请输入正确的分数：");
+	}
+
+}
