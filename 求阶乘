@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+
+public class work2_4 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int s=1;
+		System.out.println("请输入一个正整数n：");
+		Scanner t=new Scanner(System.in);
+		int n=t.nextInt();
+		for(int i=n;i>0;i--){
+			s=s*i;
+		}
+		System.out.println("n的阶乘是："+s);
+	}
+
+}
