@@ -1,0 +1,17 @@
+
+public class work2_8 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+				for(int i=1000;i<9999;i++){
+					if(i/1000==i%10){
+						if(i/100%10==i/10%10)
+							System.out.println("回文数有："+i);
+					}
+				}
+	}
+
+}
