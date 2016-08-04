@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+
+public class work2_2 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("请输入年份：");
+		Scanner y=new Scanner(System.in);
+		int ye=y.nextInt();
+		if(ye%4==0&&ye%100!=0||ye%400==0){
+			System.out.println("是闰年");
+		}else{
+			System.out.println("不是闰年");
+		}
+		
+	}
+
+}
