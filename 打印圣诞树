@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+
+public class work2_6 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+					System.out.println("要求输入树的高度，打印圣诞树");
+					Scanner height=new Scanner(System.in);
+					int h=height.nextInt();
+					for(int n=1;n<=h;n++){
+						System.out.println();for(int i=0;i<2*n-1;i++){
+							System.out.print("*");
+						}
+					}
+	}
+
+}
