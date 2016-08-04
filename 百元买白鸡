@@ -1,0 +1,24 @@
+
+public class work2_7 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+				System.out.println("百元买百鸡");
+				int gong=100/5;
+				int mu=100/3;
+				int xiao=100*3;
+				for(int i=0;i<gong;i++){
+					for(int j=0;j<mu;j++){
+						for(int n=0;n<xiao;n++){
+							if(i+j+n==100&&5*i+3*j+1/3*n==100){
+								System.out.println("有"+i+"只公鸡有"+j+"只母鸡有"+n+"只小鸡");
+							}
+						}
+					}
+				}
+	}
+
+}
