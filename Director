@@ -1,0 +1,13 @@
+
+public class Director extends BaseWorker {
+		
+	private double investment;
+	public double salary(){
+		return super.salary()*0.38+2000+investment*0.03;
+	}
+	/**
+	 * @param args
+	 */
+	
+
+}
