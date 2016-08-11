@@ -1,0 +1,136 @@
+import java.util.Scanner;
+
+
+public class WorkManager2 {
+		BaseWorker []workers =new BaseWorker[100];
+		int count=0;
+	public void add() {
+		//输入员工信息
+		/*
+		 * 1.输入员工类职位
+		 * 
+		 * */
+		System.out.println("请输入员工职位：1.普通员工  2.小时工  3.经理  4.董事");
+		Scanner sc=new Scanner(System.in);
+		int position=sc.nextInt();
+		switch(position){
+		case 1:
+			Worker w=new Worker();
+			workers[count++]=w;
+			break;
+		case 2:
+			hourWorker he=new hourWorker();
+			workers[count++]=he;
+			break;
+		case 3:
+			Manager ma=new Manager();
+			workers[count++]=ma;
+			break;
+		case 4:
+			Director di=new Director();
+			workers[count++]=di;
+			break;
+		}
+		//将员工保存到数组
+	}
+		//删除员工
+	public void delete() {
+		//根据编号删除
+		System.out.println("请输入要删除的员工编号");
+		Scanner scc=new Scanner(System.in);
+		int id=scc.nextInt();
+		
+		//遍历数组，找到员工位置
+		int index=-1;
+		for(int i = 0 ;i<workers.length;i++){
+			if(id==workers[i].getID()){
+				index=i;
+				break;
+			}
+		}
+		if(index==-1){
+			System.out.println("没有这个员工");
+		}
+		//重新组织数组
+		else{
+			for(int i=index;i<count-1;i++){
+		
+			workers[i]=workers[i+1];
+		}
+		count--;
+		}
+	
+		
+	}
+		//修改员工信息
+	public void update() {
+		//根据编号确定员工
+		System.out.println("请输入要删除的员工编号");
+		Scanner scc=new Scanner(System.in);
+		int id=scc.nextInt();
+		int index=-1;
+		for(int i = 0 ;i<workers.length;i++){
+			if(id==workers[i].getID()){
+				index=i;
+				break;
+			}
+		}
+		//输入修改后的信息
+		System.out.println("修改员工的姓名:");
+		String n=scc.next();
+		workers[index].setName(n);
+		System.out.println("修改员工的职位:");
+		String d=scc.next();
+		workers[index].setDuty(d);
+		System.out.println("修改员工的出勤时间:");
+		int da=scc.nextInt();
+		workers[index].setDays(da);
+	}
+
+		//打印工资
+	public void printSalary() {
+			//遍历员工数组，打印每个员工工资
+		for(BaseWorker i:workers){
+			System.out.println(i.getID()+"号员工的工资为："+i.getBaseSalary());
+		}
+	}
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//业务处理
+		WorkManager2 wm = new WorkManager2();
+		boolean fg=false;
+		while(fg==false){
+		System.out.println("欢迎使用员工管理系统");
+		System.out.println("请选择操作:");
+		System.out.println("1 添加员工  2 删除员工  3 修改员工  4 打印工资  5 查看员工信息  0 退出系统");
+		Scanner scanner=new Scanner(System.in);
+		int operation=scanner.nextInt();
+		
+		switch(operation){
+		case 1:
+			wm.add();
+			break;
+		case 2:
+			wm.delete();
+			break;
+		case 3:
+			wm.update();
+			break;
+		case 4:
+			wm.printSalary();
+			break;
+		case 0:
+			fg=false;
+			break;
+		default:
+			System.out.println("非法操作！请重新输入：");
+			break;
+		}
+		}
+		
+	}
+
+}
