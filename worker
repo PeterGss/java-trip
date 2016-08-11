@@ -1,0 +1,21 @@
+
+public class Worker extends BaseWorker {
+
+	
+	public double salary(){
+//		super();
+		return super.salary()*1.6+200;
+		
+		}
+	public double factSalary(int days){
+		double f = 0;
+		if(days<20)f=salary()-salary()*((20-days)/20);
+		else
+			f=salary()+300+(days-20)*1.5/20*salary();
+		return f;
+	}
+	/**
+	 * @param args
+	 */
+
+}
