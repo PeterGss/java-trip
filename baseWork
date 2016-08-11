@@ -1,0 +1,62 @@
+
+public class BaseWorker {
+	
+	private int ID;
+	private String name;
+	private String duty;
+	private int days;
+	private double baseSalary;
+	
+	public BaseWorker(){
+		
+	}
+	public double salary(){
+		return baseSalary*days/20;
+	}
+
+	public int getID() {
+		return ID;
+	}
+
+	public void setID(int iD) {
+		this.ID = iD;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDuty() {
+		return duty;
+	}
+
+	public void setDuty(String duty) {
+		this.duty = duty;
+	}
+
+	public int getDays() {
+		return days;
+	}
+
+	public void setDays(int days) {
+		this.days = days;
+	}
+
+	public double getBaseSalary() {
+		return baseSalary;
+	}
+
+	public void setBaseSalary(double baseSalary) {
+		this.baseSalary = baseSalary;
+	}
+
+	/**
+	 * @param args
+	 */
+
+
+}
