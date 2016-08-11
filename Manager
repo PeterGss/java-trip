@@ -1,0 +1,21 @@
+
+public class Manager extends BaseWorker {
+
+	private int salaryDays;
+	public double salary(int days){
+		double m;double f;
+		if(days<20)f=salary()-salary()*((20-days)/20);
+		else
+			f=salary()+300+(days-20)*1.5/20*salary();
+		m=f+salaryDays*salary();
+		return m;
+	}
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
