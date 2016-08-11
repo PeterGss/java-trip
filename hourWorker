@@ -1,0 +1,17 @@
+
+public class hourWorker extends BaseWorker {
+
+	private double daysSalary;
+	public double salary(){
+		return daysSalary*getDays();
+	}
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
