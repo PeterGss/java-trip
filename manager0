@@ -1,0 +1,79 @@
+import java.util.Scanner;
+
+
+
+
+public class WorkManager {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			BaseWorker []a=new BaseWorker[100];
+			
+//			for(int i=0;i<100;i++){
+//				a[i].setID(i);
+//			}
+			int i=0;
+			Scanner sc=new Scanner(System.in);
+			System.out.println("1. 添加员工  2. 删除员工  3. 修改员工 4. 打印工资  0. 退出系统");
+			int s=sc.nextInt();
+			switch(s){
+		case 1: {
+			
+				System.out.println("添加员工的ID:");
+				int id=sc.nextInt();
+				a[id]=new BaseWorker();
+				a[id].setID(id);
+				System.out.println("添加员工的姓名:");
+				String n=sc.next();
+				a[id].setName(n);
+				System.out.println("添加员工的职位:");
+				String d=sc.next();
+				a[id].setDuty(null);
+				System.out.println("添加员工的出勤时间:");
+				int da=sc.nextInt();
+				a[id].setDays(0);
+				break;
+		}
+		case 2: {
+			System.out.println("删除员工的ID");
+			int id=sc.nextInt();
+			a[id].setID(0);
+			a[id].setName(null);
+			a[id].setDuty(null);
+			a[id].setDays(0);
+			break;
+			
+		}
+		case 3: {
+			System.out.println("修改员工的ID:");
+			int id=sc.nextInt();
+			a[id].setID(id);
+			System.out.println("修改员工的姓名:");
+			String n=sc.next();
+			a[id].setName(n);
+			System.out.println("修改员工的职位:");
+			String d=sc.next();
+			a[id].setDuty(null);
+			System.out.println("修改员工的出勤时间:");
+			int da=sc.nextInt();
+			a[id].setDays(0);
+			break;
+		}
+		case 4: {
+			System.out.println("打印哪位员工的工资");
+			int n=sc.nextInt();
+			System.out.println(a[n].salary());
+			break;
+		}
+		case 0:{
+			System.out.println("成功退出");
+			sc.close();
+			break;
+		}
+			}
+	}
+
+}
