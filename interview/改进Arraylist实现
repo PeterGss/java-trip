@@ -1,0 +1,47 @@
+package test;
+
+import java.util.ArrayList;
+
+public class nk {
+	static ArrayList<Integer> arl=new ArrayList<Integer>();
+	public  static void main(String []args){
+	int []N={1,2,3,4,5,6,7,8,9};
+	int k =9;
+	if(k> N.length||k<=0||N.length<=0){
+		System.out.println("k长度大于N或者小于等于0");
+		return;
+		
+	}
+	 nks(N,k,0); 
+	
+	 
+	}
+	/*
+     * 递归
+     * 遍历从第一个数开始
+     * 先选定数组第一个数然后从后面的数组里挑出k-1个来组成LIST当k=1的时候输出
+     */
+	//i从哪个位置开始输出
+	private static void nks(int[] n, int k, int i) {
+
+		if(k == 1){
+			for (int j = i; j < n.length; j++) {
+				arl.add(n[j]);
+				System.out.println(arl.toString());
+				arl.remove((Object)n[j]);
+			}
+			
+		}else if(k >1){
+			for (int j = i; j <= n.length-k; j++) {
+				arl.add(n[j]);
+				nks(n, k-1, i+1);
+				arl.remove((Object)n[j]);
+			}
+			
+		}else{
+			return;
+		}
+		
+	}
+}
+© 2017 GitHub, Inc.
